@@ -1,0 +1,25 @@
+$drawerWidth: 240;
+.container {
+  width: 100%;
+  height: calc(100vh - 80px - 64px);
+  display: flex;
+}
+
+.large-body {
+  width: 100%;
+}
+
+.small-body {
+  width: calc(100% - #{$drawerWidth}px);
+}
+
+.show-menu {
+  width: #{$drawerWidth}px;
+  transition: width ease-out 0.3s, opacity 0.1s ease-in-out 0.1s;
+}
+
+.hide-menu {
+  opacity: 0;
+  width: 0;
+  transition: all ease-out 0.3s, opacity ease 0s;
+}
