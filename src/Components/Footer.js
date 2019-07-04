@@ -9,16 +9,16 @@ import twitter from "./../assets/images/twitter.svg";
 class Footer extends Component {
   render() {
     return (
-      <div className="footer-container p-6 pl-4">
+      <div className="footer-container p-6 pl-4 sm-hide">
         <span className="footer-item">
           &copy;&nbsp;
           <img src={logo} alt="logo" height="30px" width="30px" />
           &nbsp;Foodie
         </span>
-        <span className="footer-item">
+        <span className="footer-item sm-hide">
           Our services are available in every Indian metro cities
         </span>
-        <span className="footer-icons text-right-align pl-4">
+        <span className="footer-icons text-right-align pl-4 sm-hide">
           <span className="mr-6">
             <a
               rel="noopener noreferrer"

@@ -6,7 +6,7 @@ import AppRouter from "./Router/AppRouter";
 
 function App() {
   return (
-    <FoodieProvider value={{ checkout: 0 }}>
+    <FoodieProvider>
       <AppRouter />
     </FoodieProvider>
   );

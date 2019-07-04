@@ -54,7 +54,6 @@ export default function SignUp(props) {
         formData.confirmPass !== formData.password
     });
 
-    console.log(validators);
     if (
       validators.name ||
       validators.phone ||

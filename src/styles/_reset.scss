@@ -87,6 +87,20 @@ video {
   vertical-align: baseline;
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  overflow: auto;
+}
+
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 :focus {
   outline: 0;
 }

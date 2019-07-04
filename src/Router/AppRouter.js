@@ -10,6 +10,7 @@ import SignIn from "./../Authentication/SignIn";
 import SignUp from "./../Authentication/SignUp";
 import TermsAndConditions from "../Authentication/TermsAndConditions";
 import Collections from "../Containers/Collections";
+import Checkout from "../Containers/Checkout";
 
 import { isLogin } from "./ProtectorHOC";
 
@@ -46,6 +47,7 @@ function AppRouter() {
           component={TermsAndConditions}
         />
         <PrivateRoute path="/collections" component={Collections} />
+        <PrivateRoute path="/checkout" component={Checkout} />
         <Redirect to="/signin" />
       </Switch>
     </Router>

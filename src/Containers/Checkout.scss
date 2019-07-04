@@ -1,0 +1,25 @@
+.checkout-container {
+  width: 55%;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.checkout-contents-container {
+  padding: 1rem;
+}
+
+.checkout-actions {
+  display: flex;
+  flex-direction: row-reverse;
+  button {
+    margin-right: 1rem;
+  }
+}
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 480px) {
+  .checkout-container {
+    width: 100%;
+    margin: 1rem;
+  }
+}

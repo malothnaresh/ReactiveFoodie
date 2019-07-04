@@ -4,10 +4,11 @@ import React, { Component, Fragment } from "react";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import Leftmenu from "../Components/LeftMenu";
+import GridContainer from "../Components/GridContainer";
+import { FoodieContext } from "../Components/FoodieContext";
 
 //SCSS
 import "./Collection.scss";
-import GridContainer from "../Components/GridContainer";
 
 export default class Collections extends Component {
   constructor(props) {
@@ -24,18 +25,26 @@ export default class Collections extends Component {
   };
   render() {
     return (
-      <Fragment>
-        <Header toggleLeftMenu={this.toggleLeftMenu} />
-        <div className="container">
-          <div className={this.state.leftMenu ? "show-menu" : "hide-menu"}>
-            <Leftmenu />
-          </div>
-          <div className={this.state.leftMenu ? "small-body" : "large-body"}>
-            <GridContainer />
-          </div>
-        </div>
-        <Footer />
-      </Fragment>
+      <FoodieContext.Consumer>
+        {context => (
+          <Fragment>
+            <Header toggleLeftMenu={context.state.toggleLeftMenu} />
+            <div className="container">
+              <div
+                className={context.state.leftMenu ? "show-menu" : "hide-menu"}
+              >
+                <Leftmenu />
+              </div>
+              <div
+                className={context.state.leftMenu ? "small-body" : "large-body"}
+              >
+                <GridContainer />
+              </div>
+            </div>
+            <Footer />
+          </Fragment>
+        )}
+      </FoodieContext.Consumer>
     );
   }
 }

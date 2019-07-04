@@ -13,6 +13,7 @@ class FoodieProvider extends Component {
   state = {
     checkout: 0,
     products: [],
+    leftMenu: window.screen.availWidth > 480,
     increamentCheckout: product => {
       const index = this.findIndex(product);
       const products = this.state.products;
@@ -38,6 +39,9 @@ class FoodieProvider extends Component {
       product.count--;
       checkout--;
       this.setState({ products, checkout });
+    },
+    toggleLeftMenu: () => {
+      this.setState({ leftMenu: !this.state.leftMenu });
     }
   };
   render() {

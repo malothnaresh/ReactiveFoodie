@@ -32,30 +32,28 @@ class GridContainer extends Component {
           <div className="grid-container">
             {tileData.map(tile => (
               <Card key={tile.img} className="widget-card">
-                <CardActionArea>
-                  <CardMedia
-                    className="card-media"
-                    component="img"
-                    alt="Contemplative Reptile"
-                    height="140"
-                    image={tile.img}
-                    title="Contemplative Reptile"
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      {tile.title}
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    >
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
+                <CardMedia
+                  className="card-media"
+                  component="img"
+                  alt="Contemplative Reptile"
+                  height="140"
+                  image={tile.img}
+                  title="Contemplative Reptile"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {tile.title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Lizards are a widespread group of squamate reptiles, with
+                    over 6,000 species, ranging across all continents except
+                    Antarctica
+                  </Typography>
+                </CardContent>
                 <CardActions className="right-align">
                   <Fab
                     variant="extended"

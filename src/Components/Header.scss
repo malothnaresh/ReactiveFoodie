@@ -1,0 +1,15 @@
+.desktop-menu-toggle {
+  display: block !important;
+}
+.mobile-menu-toggle {
+  display: none !important;
+}
+
+@media only screen and (max-width: 480px) {
+  .desktop-menu-toggle {
+    display: none !important;
+  }
+  .mobile-menu-toggle {
+    display: block !important;
+  }
+}

@@ -49,7 +49,7 @@ $spaces: (
 );
 $sides: (top, right, bottom, left);
 
-// Utility classes are:
+// Bootstrap utility classes:
 // p-0: [padding: 0rem]
 // ml-0: [margin-left: 0rem]
 
@@ -76,6 +76,52 @@ $sides: (top, right, bottom, left);
     }
     .p#{str-slice($side, 0, 1)}-#{$space} {
       padding-#{$side}: #{$space/4}rem !important;
+    }
+  }
+}
+
+// Bootstrap style of row, cols spacing ( Every row contains 12 columns )
+// Large screen: .col-lg-#{space}
+// Medium screen: col-md-#{space}
+// Small screen: col-sm-#{space}
+// Extremely small screen: col-xs-#{space}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+$cols: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
+
+@each $col in $cols {
+  .col-lg-#{$col} {
+    flex: $col 0 0;
+    margin: 0.5rem !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  @each $col in $cols {
+    .col-xs-#{$col} {
+      flex: #{$col} 0 calc(100% / 12 * #{$col});
+      margin: 0.5rem !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  @each $col in $cols {
+    .col-sm-#{$col} {
+      flex: #{$col} 0 calc(100% / 12 * #{$col});
+      margin: 0.5rem !important;
+    }
+  }
+}
+
+@media only screen and (max-width: 1125px) {
+  @each $col in $cols {
+    .col-md-#{$col} {
+      flex: #{$col} 0 calc(100% / 12 * #{$col});
+      margin: 0.5rem !important;
     }
   }
 }
