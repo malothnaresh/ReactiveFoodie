@@ -7,26 +7,29 @@ import ListItemText from "@material-ui/core/ListItemText";
 import "./LeftMenu.scss";
 
 class Leftmenu extends Component {
+  constructor(props) {
+    super(props);
+  }
   menus = [
     {
       label: "Restuarants",
-      value: "resturants"
+      value: "/collections"
     },
     {
       label: "Get Aways",
-      value: "getaways"
+      value: "/getaways"
     },
     {
       label: "Breakfast",
-      value: "breakfast"
+      value: "/breakfast"
     },
     {
       label: "Lunch",
-      value: "lunch"
+      value: "/lunch"
     },
     {
       label: "Dinner",
-      value: "dinner"
+      value: "/dinner"
     }
   ];
 
@@ -44,7 +47,7 @@ class Leftmenu extends Component {
   };
 
   onMenuSelection = menu => () => {
-    console.log("Selected ", menu);
+    this.props.routeStack.push(menu.value);
   };
 
   render() {

@@ -13,8 +13,10 @@ class FoodieProvider extends Component {
   state = {
     checkout: 0,
     products: [],
+    totalCost: 0,
     leftMenu: window.screen.availWidth > 480,
     increamentCheckout: product => {
+      console.log(product.price);
       const index = this.findIndex(product);
       const products = this.state.products;
       let checkout = this.state.checkout;
@@ -25,7 +27,12 @@ class FoodieProvider extends Component {
         products.push(product);
       }
       checkout++;
-      this.setState({ products, checkout });
+      this.setState({
+        products,
+        checkout,
+        totalCost: this.state.totalCost + product.price
+      });
+      console.log(this.state);
     },
     decreamentCheckout: product => {
       const index = this.findIndex(product);
@@ -38,7 +45,11 @@ class FoodieProvider extends Component {
       }
       product.count--;
       checkout--;
-      this.setState({ products, checkout });
+      this.setState({
+        products,
+        checkout,
+        totalCost: this.state.totalCost - product.price
+      });
     },
     toggleLeftMenu: () => {
       this.setState({ leftMenu: !this.state.leftMenu });

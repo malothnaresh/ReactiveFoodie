@@ -33,7 +33,7 @@ export default class Collections extends Component {
               <div
                 className={context.state.leftMenu ? "show-menu" : "hide-menu"}
               >
-                <Leftmenu />
+                <Leftmenu routeStack={this.props.history} />
               </div>
               <div
                 className={context.state.leftMenu ? "small-body" : "large-body"}

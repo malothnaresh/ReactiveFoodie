@@ -6,11 +6,13 @@ $drawerWidth: 240;
 }
 
 .large-body {
-  width: 100%;
+  width: inherit;
+  margin-bottom: 1rem;
 }
 
 .small-body {
   width: calc(100% - #{$drawerWidth}px);
+  margin-bottom: 1rem;
 }
 
 .show-menu {

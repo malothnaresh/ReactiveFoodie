@@ -18,73 +18,73 @@ const tileData = [
     id: 1,
     img: breakfast,
     title: "Breakfast",
-    author: "jill111"
+    price: 50
   },
   {
     id: 2,
     img: burgers,
     title: "Tasty burger",
-    author: "director90"
+    price: 150
   },
   {
     id: 3,
     img: camera,
     title: "Camera",
-    author: "Danson67"
+    price: 5000
   },
   {
     id: 4,
     img: morning,
     title: "Morning",
-    author: "fancycrave1"
+    price: 50
   },
   {
     id: 5,
     img: hats,
     title: "Hats",
-    author: "Hans"
+    price: 200
   },
   {
     id: 6,
     img: honey,
     title: "Honey",
-    author: "fancycravel"
+    price: 250
   },
   {
     id: 7,
     img: vegetables,
     title: "Vegetables",
-    author: "jill111"
+    price: 100
   },
   {
     id: 8,
     img: plant,
     title: "Water plant",
-    author: "BkrmadtyaKarki"
+    price: 500
   },
   {
     id: 9,
     img: mushroom,
     title: "Mushrooms",
-    author: "PublicDomainPictures"
+    price: 110
   },
   {
     id: 10,
     img: olive,
     title: "Olive oil",
-    author: "congerdesign"
+    price: 220
   },
   {
     id: 11,
     img: star,
     title: "Sea star",
-    author: "821292"
+    price: 100
   },
   {
     id: 12,
     img: bike,
     title: "Bike",
-    author: "danfador"
+    price: 50000
   }
 ];
 

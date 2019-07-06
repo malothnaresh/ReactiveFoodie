@@ -23,6 +23,10 @@ body {
   text-align: right;
 }
 
+.divider {
+  border-bottom: 1px solid rgba(36, 68, 183, 0.3);
+}
+
 // Utilities : Paddings, Margins
 $spaces: (
   0,
